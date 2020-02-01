@@ -1,0 +1,3 @@
+alert tcp $HOME_NET any <> $EXTERNAL_NET any (msg:"Low Confidence"; iprep:any,Host,<,8)
+
+alert tcp $HOME_NET any <> $EXTERNAL_NET any (msg:"High Confidence"; iprep:any,Host,>,8)
