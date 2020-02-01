@@ -12,4 +12,4 @@
 
 # python3 update-mdl.py
 
-cat badcap.pcap
+# cat badcap.pcap
