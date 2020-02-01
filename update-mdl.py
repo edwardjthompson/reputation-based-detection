@@ -33,8 +33,9 @@ with open('mdl.csv', newline='') as csvfile:
             # print(len(line))
             if len(line) != 0:
                 # print(line)
-                urlLen = len(line[1])
-                rep = urlLen // 127
+                rep = len(line[1])
+
+                # rep = urlLen // 127
                 if rep < 1:
                     rep = 1
                 elif rep > 127:
