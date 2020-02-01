@@ -10,4 +10,4 @@
 
 # pip install requests
 
-# python3 update-mdl.py
+python3 update-mdl.py

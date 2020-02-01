@@ -41,5 +41,7 @@ with open('mdl.csv', newline='') as csvfile:
                 elif rep > 127:
                     rep = 127
                 else:
-                    rep =/ 5
+                    rep = rep // 5
+                if rep < 1:
+                    rep = 1
                 writer.writerow((line[2], 1, rep))
