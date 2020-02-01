@@ -1,13 +1,13 @@
 import csv
 # import io
-import requests
+# import requests
 
-r = requests.get('https://gitlab.cs.wwu.edu/tsikerm/assignment-files/raw/master/mdl.csv')
+# r = requests.get('https://gitlab.cs.wwu.edu/tsikerm/assignment-files/raw/master/mdl.csv')
 
 # print(r.text)
 
-with open('mdl.csv', 'w') as mdlcsv:
-    mdlcsv.write(r.text)
+# with open('mdl.csv', 'w') as mdlcsv:
+#     mdlcsv.write(r.text)
     # writer = csv.writer(mdlcsv)
     # writer.writerow(r.text)
 # print(r.content)
