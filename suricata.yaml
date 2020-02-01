@@ -472,7 +472,7 @@ logging:
   - file:
       enabled: yes
       level: info
-      filename: ./ #/var/log/suricata/suricata.log
+      filename: /var/log/suricata/suricata.log
       # type: json
   - syslog:
       enabled: no

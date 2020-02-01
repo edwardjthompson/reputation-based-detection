@@ -11,3 +11,5 @@
 # pip install requests
 
 # python3 update-mdl.py
+
+cat badcap.pcap
