@@ -4,10 +4,10 @@
 
 # sed '$d' mdl.csv
 
-rm mdl.csv
+# rm mdl.csv
 
 # rm mdl.list
 
-pip install requests
+# pip install requests
 
 python3 update-mdl.py
