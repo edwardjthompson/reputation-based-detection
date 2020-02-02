@@ -1,11 +1,13 @@
 import csv
 
 with open('mdl.list', newline='') as csvfile:
-    sum = 0
-    count = 0
     reader = csv.reader(csvfile, delimiter=',', quotechar='"')
     for line in reader:
-        count += 1
-        sum += int(line[2])
-
-    print(sum / count)
+        for line2 in reader:
+            # print (line, line2)
+            # l1 = line.split(",")
+            # l2 = line2.split(",")
+            # print(line[0], line2[0])
+            if line[0] == line2[0]:
+                print(line)
+        

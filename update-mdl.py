@@ -27,10 +27,12 @@ with open('mdl.csv', 'r+') as f:
 
 # for line in r.text:
 #     print(line)
-counter = 0
+counter = 1
+counter2 = 1
 with open('mdl.csv', newline='') as csvfile:
     reader = csv.reader(csvfile, delimiter=',', quotechar='"')
     with open('mdl.list', 'w') as mdlfile:
+        writer = csv.writer(mdlfile)
         for line in reader:
             # print(line)
             # print(len(line))
@@ -38,10 +40,15 @@ with open('mdl.csv', newline='') as csvfile:
                 # print(line)
                 rep = len(line[1])
                 # ip = line[2]
-                ip = re.findall( r'[0-9]+(?:\.[0-9]+){3}', line[2] )
-                print(line[2],"->",ip)
+                # ip = re.findall( r'[0-9]+(?:\.[0-9]+){3}', line[2] )
+                ip = "140.160." + str(counter2) + "." + str(counter)
+                counter += 1
+                if counter > 254:
+                    counter = 1
+                    counter2 += 1
+                # print(line[2],"->",ip)
                 num = ip[0]
-                print(num)
+                # print(num)
 
                 # rep = urlLen // 127
                 if rep < 1:
@@ -52,4 +59,4 @@ with open('mdl.csv', newline='') as csvfile:
                     rep = rep // 5
                 if rep < 1:
                     rep = 1
-                writer.writerow((ip[0], 1, rep))
+                writer.writerow((ip, 1, rep))
