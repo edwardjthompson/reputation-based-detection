@@ -27,11 +27,10 @@ with open('mdl.csv', 'r+') as f:
 
 # for line in r.text:
 #     print(line)
-
+counter = 0
 with open('mdl.csv', newline='') as csvfile:
     reader = csv.reader(csvfile, delimiter=',', quotechar='"')
     with open('mdl.list', 'w') as mdlfile:
-        writer = csv.writer(mdlfile)
         for line in reader:
             # print(line)
             # print(len(line))
