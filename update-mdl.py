@@ -1,4 +1,5 @@
 import csv
+import re
 # import io
 # import requests
 
@@ -14,6 +15,9 @@ import csv
 with open('mdl.csv', 'r+') as f:
     lines = f.readlines()
     lines = lines[:-1]
+    # print(len(lines))
+    # lines = list(set(lines))
+    # print(len(lines))
     f.seek(0)
     f.truncate()
     for line in lines:
@@ -29,11 +33,16 @@ with open('mdl.csv', newline='') as csvfile:
     with open('mdl.list', 'w') as mdlfile:
         writer = csv.writer(mdlfile)
         for line in reader:
-            print(line)
+            # print(line)
             # print(len(line))
             if len(line) != 0:
                 # print(line)
                 rep = len(line[1])
+                # ip = line[2]
+                ip = re.findall( r'[0-9]+(?:\.[0-9]+){3}', line[2] )
+                print(line[2],"->",ip)
+                num = ip[0]
+                print(num)
 
                 # rep = urlLen // 127
                 if rep < 1:
@@ -44,4 +53,4 @@ with open('mdl.csv', newline='') as csvfile:
                     rep = rep // 5
                 if rep < 1:
                     rep = 1
-                writer.writerow((line[2], 1, rep))
+                writer.writerow((ip[0], 1, rep))
