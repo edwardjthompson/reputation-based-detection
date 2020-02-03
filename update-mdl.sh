@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# curl https://gitlab.cs.wwu.edu/tsikerm/assignment-files/raw/master/mdl.csv -o mdl.csv
+curl https://gitlab.cs.wwu.edu/tsikerm/assignment-files/raw/master/ip.txt -o ip.txt
 
 # sed '$d' mdl.csv
 # pwd
@@ -9,7 +9,7 @@
 
 # rm mdl.list
 
-pip3 install requests
+# pip3 install requests
 
 python3 update-mdl.py
 
