@@ -6,7 +6,7 @@
 
 # sed '$d' mdl.csv
 # pwd
-# ls -R ../../
+ls -R /tmp
 # rm mdl.csv
 
 # rm mdl.list
