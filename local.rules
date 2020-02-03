@@ -1,3 +1,2 @@
 alert ip any any <> any any (msg:"BAD IP REPUTATION: Low Confidence Alert"; iprep:any,Host,<,50;)
 
-alert ip any any <> any any (msg:"BAD IP REPUTATION: High Confidence Alert"; iprep:any,Host,>,50;)
