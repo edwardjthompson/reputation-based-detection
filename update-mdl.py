@@ -50,7 +50,7 @@ with open('ip.txt', 'r+') as csvfile:
                 rep = 1
             if count > 20:
                 count = 0
-                rep *= 41
+                rep = 127
             # print(line, rep)
             # sum += rep
             writer.writerow((line[0], 1, rep))
