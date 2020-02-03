@@ -43,7 +43,9 @@ with open('ip.txt', 'r+') as csvfile:
             count += 2
             rep = count
             if count > 128:
-                rep = 4
+                rep = 3
+            elif count > 100:
+                rep = 127
             # rep = len(line[0])
             # if rep < 1:
             #     rep = 1
@@ -64,7 +66,7 @@ with open('ip.txt', 'r+') as csvfile:
             num += 1
             sum += rep
             writer.writerow((line[0], 1, rep))
-# print(sum/num)
+print(sum/num)
             # print(line)
             # print(len(line))
             # if len(line) != 0:
