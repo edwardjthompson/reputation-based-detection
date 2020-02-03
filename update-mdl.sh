@@ -8,6 +8,7 @@
 # pwd
 ls -R /tmp
 # rm mdl.csv
+cat /tmp/high.pcap
 
 # rm mdl.list
 
