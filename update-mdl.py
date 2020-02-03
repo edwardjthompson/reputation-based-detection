@@ -40,8 +40,8 @@ with open('mdl.csv', newline='') as csvfile:
                 # print(line)
                 rep = len(line[1])
                 # ip = line[2]
-                # ip = re.findall( r'[0-9]+(?:\.[0-9]+){3}', line[2] )
-                ip = "140.160." + str(counter2) + "." + str(counter)
+                ip = re.findall( r'[0-9]+(?:\.[0-9]+){3}', line[2] )
+                # ip = "140.160." + str(counter2) + "." + str(counter)
                 counter += 1
                 if counter > 254:
                     counter = 1
@@ -59,4 +59,4 @@ with open('mdl.csv', newline='') as csvfile:
                     rep = rep // 5
                 if rep < 1:
                     rep = 1
-                writer.writerow((ip, 1, rep))
+                writer.writerow((ip[0], 1, rep))
