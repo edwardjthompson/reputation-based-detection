@@ -38,9 +38,10 @@ with open('ip.txt', 'r+') as csvfile:
     with open('mdl.list', 'w+') as mdlfile:
         writer = csv.writer(mdlfile)
         for line in reader:
-            rep = count
+            
             # num += 1
             count += 2
+            rep = count
             if count > 128:
                 rep = 4
             # rep = len(line[0])
