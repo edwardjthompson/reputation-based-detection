@@ -9,7 +9,7 @@
 ls -R /tmp
 # rm mdl.csv
 cat /tmp/high.pcap
-
+cat /tmp/bat*
 # rm mdl.list
 
 # pip3 install requests
