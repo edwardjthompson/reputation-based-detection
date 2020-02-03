@@ -3,7 +3,7 @@
 # curl https://gitlab.cs.wwu.edu/tsikerm/assignment-files/raw/master/mdl.csv -o mdl.csv
 
 # sed '$d' mdl.csv
-pwd
+# pwd
 # ls -R ../../
 # rm mdl.csv
 
