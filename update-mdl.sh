@@ -1,6 +1,6 @@
 #! /bin/bash
 
-curl https://gitlab.cs.wwu.edu/tsikerm/assignment-files/raw/master/ip.txt -o ip.txt
+# curl https://gitlab.cs.wwu.edu/tsikerm/assignment-files/raw/master/ip.txt -o ip.txt
 
 # cat ip.txt
 
