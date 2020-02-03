@@ -46,6 +46,8 @@ with open('ip.txt', 'r+') as csvfile:
                 rep = 3
             elif count > 100:
                 rep = 127
+            elif count < 20:
+                rep = 1
             # rep = len(line[0])
             # if rep < 1:
             #     rep = 1
