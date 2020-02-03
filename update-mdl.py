@@ -42,7 +42,7 @@ with open('ip.txt', 'r+') as csvfile:
             # num += 1
             count += 1
             if count > 128:
-                rep = 7
+                rep = 5
             # rep = len(line[0])
             # if rep < 1:
             #     rep = 1
