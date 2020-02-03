@@ -30,6 +30,7 @@ import csv
 # counter = 1
 # counter2 = 1
 count = 0
+first = 0
 # sum = 0
 # num = 0
 with open('ip.txt', 'r+') as csvfile:
@@ -53,6 +54,9 @@ with open('ip.txt', 'r+') as csvfile:
                 rep = 127
             # print(line, rep)
             # sum += rep
+            if first == 0:
+                rep = 1
+                first = 1
             writer.writerow((line[0], 1, rep))
 # print(sum/num)
             # print(line)
