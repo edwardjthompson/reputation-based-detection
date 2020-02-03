@@ -1,7 +1,6 @@
 import csv
 
 count = 1
-first = 0
 with open('ip.txt', 'r+') as csvfile:
     reader = csv.reader(csvfile, delimiter=',', quotechar='"')
     with open('mdl.list', 'w+') as mdlfile:
