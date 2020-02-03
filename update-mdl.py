@@ -34,7 +34,7 @@ with open('mdl.csv', newline='') as csvfile:
     with open('mdl.list', 'w') as mdlfile:
         writer = csv.writer(mdlfile)
         for line in reader:
-            print(line)
+            # print(line)
             # print(len(line))
             if len(line) != 0:
                 # print(line, len(line))

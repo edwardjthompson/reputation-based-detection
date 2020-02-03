@@ -9,8 +9,8 @@
 
 # rm mdl.list
 
-# pip install requests
+pip3 install requests
 
 python3 update-mdl.py
 
-ls
+# ls
