@@ -38,25 +38,28 @@ with open('ip.txt', 'r+') as csvfile:
     with open('mdl.list', 'w+') as mdlfile:
         writer = csv.writer(mdlfile)
         for line in reader:
+            rep = count
             # num += 1
             count += 1
-            rep = len(line[0])
-            if rep < 1:
-                rep = 1
-            elif rep > 127:
-                rep = 127
-            else:
-                rep = rep // 5
-            if rep < 1:
-                rep = 1
-            if count > 20:
-                count = 0
-                rep = 127
+            if count > 127:
+                rep = 7
+            # rep = len(line[0])
+            # if rep < 1:
+            #     rep = 1
+            # elif rep > 127:
+            #     rep = 127
+            # else:
+            #     rep = rep // 5
+            # if rep < 1:
+            #     rep = 1
+            # if count > 20:
+            #     count = 0
+            #     rep = 127
             # print(line, rep)
             # sum += rep
-            if first == 0:
-                rep = 1
-                first = 1
+            # if first == 0:
+            #     rep = 1
+            #     first = 1
             writer.writerow((line[0], 1, rep))
 # print(sum/num)
             # print(line)
