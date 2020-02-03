@@ -31,8 +31,8 @@ import csv
 # counter2 = 1
 count = 1
 first = 0
-# sum = 0
-# num = 0
+sum = 0
+num = 0
 with open('ip.txt', 'r+') as csvfile:
     reader = csv.reader(csvfile, delimiter=',', quotechar='"')
     with open('mdl.list', 'w+') as mdlfile:
@@ -40,9 +40,9 @@ with open('ip.txt', 'r+') as csvfile:
         for line in reader:
             rep = count
             # num += 1
-            count += 1
+            count += 2
             if count > 128:
-                rep = 5
+                rep = 4
             # rep = len(line[0])
             # if rep < 1:
             #     rep = 1
@@ -60,8 +60,10 @@ with open('ip.txt', 'r+') as csvfile:
             # if first == 0:
             #     rep = 1
             #     first = 1
+            num += 1
+            sum += rep
             writer.writerow((line[0], 1, rep))
-# print(sum/num)
+print(sum/num)
             # print(line)
             # print(len(line))
             # if len(line) != 0:
