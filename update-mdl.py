@@ -68,7 +68,7 @@ with open('ip.txt', 'r+') as csvfile:
             num += 1
             sum += rep
             writer.writerow((line[0], 1, rep))
-print(sum/num)
+# print(sum/num)
             # print(line)
             # print(len(line))
             # if len(line) != 0:
