@@ -29,7 +29,7 @@ import csv
 #     print(line)
 # counter = 1
 # counter2 = 1
-count = 0
+count = 1
 first = 0
 # sum = 0
 # num = 0
@@ -41,7 +41,7 @@ with open('ip.txt', 'r+') as csvfile:
             rep = count
             # num += 1
             count += 1
-            if count > 127:
+            if count > 128:
                 rep = 7
             # rep = len(line[0])
             # if rep < 1:
